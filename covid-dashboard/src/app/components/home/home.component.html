@@ -1,0 +1,52 @@
+<div class="jumbotron bg-white text-center p-2" >
+  <app-header></app-header>
+
+  <app-dashboard-card
+    [totalConfirmed]='totalConfirmed'
+    [totalActive]='totalActive'
+    [totalDeaths]='totalDeaths'
+    [totalRecovered]='totalRecovered' >
+  </app-dashboard-card>
+</div>
+
+<!-- <div class="ui form mx-auto" style="max-width:500px;">
+  <div class="inline fields">
+    <label for="fruit" style='margin-bottom:8px;'>Select case type:</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input (click)="updateChart($event.target.value)" type="radio" name="fruit" id='confirmed' value='confirmed' checked="" tabindex="0" class="hidden">
+        <label  for='confirmed'>Confirmed</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input (click)="updateChart($event.target.value)" type="radio" name="fruit" id='deaths' value='deaths' tabindex="0" class="hidden">
+        <label  for='deaths'>Deaths</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input (click)="updateChart($event.target.value)" type="radio" name="fruit" id='active' value='active' tabindex="0" class="hidden">
+        <label for='active'>Active</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input (click)="updateChart($event.target.value)" type="radio" name="fruit" id='recovered' value='recovered' tabindex="0" class="hidden">
+        <label for='recovered'>Recovered</label>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col ml-5">
+    <google-chart [data]="pieChart"></google-chart>
+  </div>
+  <div class="col mr-5">
+    <google-chart [data]="columnChart"></google-chart>
+  </div>
+</div>
+
+
+

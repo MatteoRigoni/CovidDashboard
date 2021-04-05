@@ -1,0 +1,18 @@
+<div class="jumbotron bg-white text-center p-2" >
+  <app-header></app-header>
+
+  <div class="form-group mx-auto" style="max-width: 400px;">
+    <label for="country">Select country</label>
+    <select name="" id="country" class="form-control" (change)="updateValues($event.target.value)">
+      <option value="empty"></option>
+      <option *ngFor="let country of countries" value="{{country}}">{{country}}</option>
+    </select>
+  </div>
+
+  <app-dashboard-card
+    [totalConfirmed]='totalConfirmed'
+    [totalActive]='totalActive'
+    [totalDeaths]='totalDeaths'
+    [totalRecovered]='totalRecovered' >
+  </app-dashboard-card>
+</div>
